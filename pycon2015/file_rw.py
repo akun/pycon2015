@@ -4,7 +4,7 @@
 import os
 
 
-def read(file_path):
+def read_dollar(file_path):
     dollar_list = []
 
     with open(file_path) as f:
@@ -13,6 +13,9 @@ def read(file_path):
     return dollar_list
 
 
-def write(file_path):
+def write_rmb(file_path, rmb_list=None):
+    if rmb_list is None:
+        rmb_list = []
+
     with open(file_path, 'w') as f:
-        f.write(os.linesep.join([str(i) for i in range(10)]))
+        f.write(os.linesep.join([str(i) for i in rmb_list]))
