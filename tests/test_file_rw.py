@@ -1,9 +1,10 @@
 #!/usr/bin/env python
 # coding=utf-8
 
-from mock import mock_open, patch
 import os
 import unittest
+
+from mock import mock_open, patch
 
 from pycon2015.file_rw import read_dollar, write_rmb
 
