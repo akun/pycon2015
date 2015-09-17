@@ -1,0 +1,4 @@
+{ "_id" : { "$oid" : "55fac399cf3382641613516c" }, "name" : "Learn Python The Hard Way" }
+{ "_id" : { "$oid" : "55fac3f7b999962a0cbe10de" }, "name" : "Python Cookbook" }
+{ "_id" : { "$oid" : "55fac419b999962a0cbe10df" }, "name" : "Programming Python" }
+{ "_id" : { "$oid" : "55fac471b999962a0cbe10e0" }, "name" : "Dive Into Python" }
