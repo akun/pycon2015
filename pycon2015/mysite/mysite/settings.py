@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/1.8/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import sys
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -101,3 +102,18 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if 'test' in sys.argv:
+    list(INSTALLED_APPS).append('django_nose')
+
+    TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+    NOSE_ARGS = [
+        '--cover-erase',
+        '--cover-inclusive',
+        '--cover-package', 'pycon2015,polls',
+        '--nocapture',
+        '--stop',
+        '--verbosity', '3',
+        '--with-coverage',
+    ]
